@@ -17,363 +17,348 @@ body{background:#0F0A1A;color:#F0EDF8;font-family:'Poppins','Noto Sans Tamil',sa
 #langBtn:hover{transform:translateY(-2px);}
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none;}
 
-/* ==========================================
-   HERO SECTION
-========================================== */
+<section id="hero">
+    <div class="hero-bg"></div>
+
+    <div class="spin-ring sr1"></div>
+    <div class="spin-ring sr2"></div>
+    <div class="spin-ring sr3"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            ✨ SAVE THE DATE ✨
+        </div>
+
+        <div class="mandala">
+
+            <div class="mr mr1"></div>
+            <div class="mr mr2"></div>
+            <div class="mr mr3"></div>
+
+            <div class="odot od1"></div>
+            <div class="odot od2"></div>
+            <div class="odot od3"></div>
+            <div class="odot od4"></div>
+
+            <div class="mcore">
+                <div class="mcore-om">ॐ</div>
+                <div class="mcore-flower">🌸</div>
+            </div>
+
+        </div>
+
+        <h1 class="hero-title">
+            S. Selva Narayanan
+            <span class="heart">❤</span>
+            A. MohanaSri
+        </h1>
+
+        <p class="hero-sub">
+            TOGETHER WITH THEIR FAMILIES
+        </p>
+
+        <div class="hero-date">
+            24 • JUNE • 2026
+        </div>
+
+    </div>
+</section>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#0B0618;
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+}
+
+/* HERO */
 
 #hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    overflow:hidden;
-    padding:40px 20px;
-    z-index:10;
+position:relative;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+overflow:hidden;
+padding:40px 20px;
 }
 
 .hero-bg{
-    position:absolute;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 20%,
-    rgba(124,58,237,.25),
-    transparent 40%),
-
-    radial-gradient(circle at 80% 80%,
-    rgba(232,69,106,.22),
-    transparent 40%),
-
-    radial-gradient(circle at center,
-    rgba(26,188,176,.08),
-    transparent 60%),
-
-    #0A0618;
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at 20% 20%,rgba(124,58,237,.35),transparent 45%),
+radial-gradient(circle at 80% 80%,rgba(232,69,106,.25),transparent 45%),
+#0B0618;
 }
 
-/* ==========================================
-   BACKGROUND ORBITS
-========================================== */
+/* BACKGROUND RINGS */
 
 .spin-ring{
-    position:absolute;
-    border-radius:50%;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    animation:rspin linear infinite;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border-radius:50%;
+animation:spin linear infinite;
 }
 
 .sr1{
-    width:900px;
-    height:900px;
-    border:1px solid rgba(232,69,106,.08);
-    animation-duration:100s;
+width:900px;
+height:900px;
+border:1px solid rgba(255,255,255,.05);
+animation-duration:90s;
 }
 
 .sr2{
-    width:650px;
-    height:650px;
-    border:1px dashed rgba(124,58,237,.12);
-    animation-duration:70s;
-    animation-direction:reverse;
+width:650px;
+height:650px;
+border:1px dashed rgba(255,255,255,.08);
+animation-duration:60s;
+animation-direction:reverse;
 }
 
 .sr3{
-    width:450px;
-    height:450px;
-    border:1px solid rgba(26,188,176,.08);
-    animation-duration:45s;
+width:450px;
+height:450px;
+border:1px solid rgba(255,255,255,.05);
+animation-duration:40s;
 }
 
-@keyframes rspin{
-    from{
-        transform:translate(-50%,-50%) rotate(0deg);
-    }
-    to{
-        transform:translate(-50%,-50%) rotate(360deg);
-    }
+@keyframes spin{
+from{
+transform:translate(-50%,-50%) rotate(0deg);
+}
+to{
+transform:translate(-50%,-50%) rotate(360deg);
+}
 }
 
-/* ==========================================
-   MANDALA
-========================================== */
+/* CONTENT */
+
+.hero-content{
+position:relative;
+z-index:10;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* BADGE */
+
+.hero-badge{
+padding:10px 25px;
+border-radius:30px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+color:#ff7eb3;
+font-size:12px;
+letter-spacing:3px;
+margin-bottom:25px;
+}
+
+/* MANDALA */
 
 .mandala{
-    position:relative;
-    width:420px;
-    height:420px;
-    margin:0 auto 40px;
+position:relative;
+width:420px;
+height:420px;
+margin-bottom:30px;
 }
 
 .mr{
-    position:absolute;
-    border-radius:50%;
-    animation:rspin linear infinite;
+position:absolute;
+border-radius:50%;
+animation:spin linear infinite;
 }
 
 .mr1{
-    inset:0;
-    border:2px solid rgba(232,69,106,.35);
-    animation-duration:14s;
+inset:0;
+border:2px solid rgba(232,69,106,.35);
+animation-duration:15s;
 }
 
 .mr2{
-    inset:35px;
-    border:2px dashed rgba(124,58,237,.35);
-    animation-duration:10s;
-    animation-direction:reverse;
+inset:35px;
+border:2px dashed rgba(124,58,237,.4);
+animation-duration:10s;
+animation-direction:reverse;
 }
 
 .mr3{
-    inset:70px;
-    border:2px solid rgba(26,188,176,.35);
-    animation-duration:7s;
+inset:70px;
+border:2px solid rgba(26,188,176,.4);
+animation-duration:6s;
 }
 
-/* ==========================================
-   ORBITING DOTS
-========================================== */
+/* ORBITS */
 
 .odot{
-    position:absolute;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    top:50%;
-    left:50%;
-    margin:-6px;
+position:absolute;
+width:12px;
+height:12px;
+border-radius:50%;
+top:50%;
+left:50%;
+margin:-6px;
 }
 
 .od1{
-    background:#E8456A;
-    box-shadow:0 0 18px #E8456A;
-    animation:od1 6s linear infinite;
+background:#ff4d88;
+box-shadow:0 0 20px #ff4d88;
+animation:orbit1 6s linear infinite;
 }
 
 .od2{
-    background:#1ABCB0;
-    box-shadow:0 0 18px #1ABCB0;
-    animation:od2 8s linear infinite;
+background:#00ffe0;
+box-shadow:0 0 20px #00ffe0;
+animation:orbit2 8s linear infinite;
 }
 
 .od3{
-    background:#F59E0B;
-    box-shadow:0 0 18px #F59E0B;
-    animation:od3 5s linear infinite;
+background:#ffc107;
+box-shadow:0 0 20px #ffc107;
+animation:orbit3 5s linear infinite;
 }
 
 .od4{
-    background:#A78BFA;
-    box-shadow:0 0 18px #A78BFA;
-    animation:od4 9s linear infinite;
+background:#b388ff;
+box-shadow:0 0 20px #b388ff;
+animation:orbit4 9s linear infinite;
 }
 
-@keyframes od1{
-    from{transform:rotate(0deg) translateX(190px);}
-    to{transform:rotate(360deg) translateX(190px);}
+@keyframes orbit1{
+from{transform:rotate(0deg) translateX(200px);}
+to{transform:rotate(360deg) translateX(200px);}
 }
 
-@keyframes od2{
-    from{transform:rotate(90deg) translateX(155px);}
-    to{transform:rotate(450deg) translateX(155px);}
+@keyframes orbit2{
+from{transform:rotate(90deg) translateX(160px);}
+to{transform:rotate(450deg) translateX(160px);}
 }
 
-@keyframes od3{
-    from{transform:rotate(180deg) translateX(120px);}
-    to{transform:rotate(540deg) translateX(120px);}
+@keyframes orbit3{
+from{transform:rotate(180deg) translateX(120px);}
+to{transform:rotate(540deg) translateX(120px);}
 }
 
-@keyframes od4{
-    from{transform:rotate(270deg) translateX(190px);}
-    to{transform:rotate(630deg) translateX(190px);}
+@keyframes orbit4{
+from{transform:rotate(270deg) translateX(200px);}
+to{transform:rotate(630deg) translateX(200px);}
 }
 
-/* ==========================================
-   CENTER CORE
-========================================== */
+/* CENTER */
 
 .mcore{
-    position:absolute;
-    inset:110px;
-    border-radius:50%;
+position:absolute;
+width:140px;
+height:140px;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+border-radius:50%;
 
-    background:
-    linear-gradient(
-    135deg,
-    rgba(124,58,237,.35),
-    rgba(232,69,106,.25),
-    rgba(26,188,176,.25)
-    );
+background:
+linear-gradient(
+135deg,
+rgba(255,100,180,.4),
+rgba(124,58,237,.4)
+);
 
-    border:2px solid rgba(255,255,255,.15);
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    box-shadow:
-    0 0 40px rgba(124,58,237,.4),
-    0 0 80px rgba(232,69,106,.2);
+box-shadow:
+0 0 40px rgba(255,100,180,.4),
+0 0 80px rgba(124,58,237,.3);
 }
 
 .mcore-om{
-    font-size:42px;
-    color:#FCD34D;
+font-size:42px;
+color:#FFD54F;
 }
 
-.mcore-f{
-    font-size:24px;
-    margin-top:5px;
+.mcore-flower{
+font-size:20px;
 }
 
-/* ==========================================
-   FLOATING SYMBOLS
-========================================== */
-
-.mpetal{
-    position:absolute;
-    font-size:20px;
-    animation:floaty 4s ease-in-out infinite;
-}
-
-.mp1{top:5%;left:48%;color:#FF7096;}
-.mp2{top:25%;right:5%;color:#FCD34D;}
-.mp3{bottom:25%;right:5%;color:#4FD6CC;}
-.mp4{bottom:5%;left:48%;color:#A78BFA;}
-.mp5{bottom:25%;left:5%;color:#FF7096;}
-.mp6{top:25%;left:5%;color:#FCD34D;}
-
-@keyframes floaty{
-    0%,100%{
-        transform:translateY(0);
-    }
-    50%{
-        transform:translateY(-10px);
-    }
-}
-
-/* ==========================================
-   HERO TEXT
-========================================== */
-
-.hero-badge{
-    display:inline-block;
-    padding:8px 22px;
-    border-radius:30px;
-
-    background:
-    linear-gradient(
-    135deg,
-    rgba(232,69,106,.2),
-    rgba(124,58,237,.2)
-    );
-
-    border:1px solid rgba(255,255,255,.15);
-
-    font-size:11px;
-    letter-spacing:3px;
-    color:#FF7096;
-
-    margin-bottom:25px;
-}
+/* TITLE */
 
 .hero-title{
-    font-family:'Playfair Display',serif;
-    font-size:clamp(38px,5vw,72px);
-    line-height:1.15;
+font-size:clamp(38px,5vw,72px);
+font-weight:700;
+line-height:1.2;
 
-    max-width:900px;
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#ff80ab,
+#ffd54f,
+#80cbc4
+);
 
-    background:
-    linear-gradient(
-    135deg,
-    #ffffff,
-    #FF7096,
-    #FCD34D,
-    #4FD6CC
-    );
-
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-.hero-heart{
-    display:inline-block;
-    animation:hbeat 1.5s infinite;
-}
-
-@keyframes hbeat{
-    0%,100%{
-        transform:scale(1);
-    }
-    50%{
-        transform:scale(1.25);
-    }
+.heart{
+color:#ff4d88;
+-webkit-text-fill-color:#ff4d88;
 }
 
 .hero-sub{
-    margin-top:14px;
-    font-size:14px;
-    letter-spacing:5px;
-    color:rgba(255,255,255,.6);
+margin-top:15px;
+color:rgba(255,255,255,.7);
+letter-spacing:4px;
+font-size:13px;
 }
 
-.hero-pill{
-    margin-top:25px;
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-
-    padding:14px 32px;
-    border-radius:50px;
-
-    background:
-    linear-gradient(
-    135deg,
-    rgba(26,188,176,.15),
-    rgba(245,158,11,.15)
-    );
-
-    border:1px solid rgba(26,188,176,.3);
-
-    color:#4FD6CC;
-    font-weight:600;
+.hero-date{
+margin-top:25px;
+padding:14px 30px;
+border-radius:40px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+color:#4FD6CC;
+font-weight:600;
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .mandala{
-        width:300px;
-        height:300px;
-    }
-
-    .mcore{
-        inset:75px;
-    }
-
-    .sr1{
-        width:500px;
-        height:500px;
-    }
-
-    .sr2{
-        width:380px;
-        height:380px;
-    }
-
-    .sr3{
-        width:260px;
-        height:260px;
-    }
+.mandala{
+width:300px;
+height:300px;
 }
+
+.mcore{
+width:100px;
+height:100px;
+}
+
+.mcore-om{
+font-size:30px;
+}
+
+.hero-title{
+font-size:34px;
+}
+}
+
+</style>
 /* COUPLE SHOWCASE */
 .showcase{display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,48px);flex-wrap:wrap;max-width:960px;margin:0 auto;}
 .sc-card{position:relative;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:36px 28px;min-width:210px;max-width:270px;flex:1;text-align:center;transition:transform .4s,box-shadow .4s;}
